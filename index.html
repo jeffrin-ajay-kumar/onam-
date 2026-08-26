@@ -1,0 +1,3126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         BASIC DOCUMENT INFORMATION
+         ========================================================= -->
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones, tablets and PCs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser description -->
+    <meta name="description"
+        content="A vibrant interactive celebration of Kerala and Onam featuring Pookolam, memories, photographs, videos, music and Kerala's natural beauty.">
+
+    <meta name="keywords"
+        content="Onam, Kerala, Pookolam, Kerala Onam, Onam Celebration, Onam Memories, Kerala Culture">
+
+    <meta name="author" content="S. Jeffrin Ajay Kumar">
+
+    <!-- Prevents search engines from making assumptions about indexing
+         while this is still a school project. -->
+    <meta name="robots" content="index, follow">
+
+
+    <!-- =========================================================
+         WEBSITE TITLE
+         ========================================================= -->
+
+    <title>🌼 avttk Onam | A Celebration of Togetherness</title>
+
+
+    <!-- =========================================================
+         EXTERNAL RESOURCES
+         ========================================================= -->
+
+    <!-- Google Fonts will be used later by CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Manjari:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main stylesheet — we will build this next -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- =========================================================
+         SOCIAL / SHARING METADATA
+         ========================================================= -->
+
+    <meta property="og:title" content="avttk Onam | A Celebration of Togetherness">
+    <meta property="og:description"
+        content="Experience the colors, traditions, nature, music, Pookolam and memories of Kerala's Onam celebration.">
+    <meta property="og:type" content="website">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         PAGE LOADER
+         =========================================================
+         This gives us a beautiful opening animation later.
+         JavaScript will remove the "active" state after loading.
+         ========================================================= -->
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+
+        <div class="loader-content">
+
+            <div class="loader-pookolam" aria-hidden="true">
+                <span>🌼</span>
+                <span>🌼</span>
+                <span>🌼</span>
+                <span>🌼</span>
+                <span>🌼</span>
+                <span>🌼</span>
+            </div>
+
+            <p class="loader-small-text">WELCOME TO</p>
+
+            <h1 class="loader-title">KERALA</h1>
+
+            <p class="loader-subtitle">A Celebration of Onam</p>
+
+            <div class="loader-progress">
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         DECORATIVE BACKGROUND ELEMENTS
+         =========================================================
+         These elements allow CSS to create Kerala-inspired
+         atmospheric effects without interfering with content.
+         ========================================================= -->
+
+    <div class="background-decoration" aria-hidden="true">
+
+        <div class="floating-leaf leaf-one">🌿</div>
+        <div class="floating-leaf leaf-two">🍃</div>
+        <div class="floating-leaf leaf-three">🌿</div>
+
+        <div class="floating-flower flower-one">🌼</div>
+        <div class="floating-flower flower-two">🌸</div>
+        <div class="floating-flower flower-three">🌼</div>
+
+    </div>
+
+
+    <!-- =========================================================
+         RAIN / MONSOON ATMOSPHERE
+         =========================================================
+         JavaScript can generate additional rain drops later.
+         Keeping the container here makes the effect optional.
+         ========================================================= -->
+
+    <div class="rain-container" id="rainContainer" aria-hidden="true"></div>
+
+
+    <!-- =========================================================
+         HEADER / NAVIGATION
+         ========================================================= -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-inner">
+
+            <!-- -------------------------------------------------
+                 HAMBURGER MENU
+                 ------------------------------------------------- -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation">
+
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+
+            </button>
+
+
+            <!-- -------------------------------------------------
+                 SMALL BRAND
+                 ------------------------------------------------- -->
+
+            <a href="#home" class="site-logo" aria-label="Go to home">
+
+                <span class="logo-flower">🌼</span>
+
+                <span class="logo-text">
+                    <strong>ONAM</strong>
+                    <small>KERALA</small>
+                </span>
+
+            </a>
+
+
+            <!-- -------------------------------------------------
+                 HEADER RIGHT SIDE
+                 ------------------------------------------------- -->
+
+            <div class="header-actions">
+
+                <button
+                    class="music-mini-button"
+                    id="musicMiniButton"
+                    type="button"
+                    aria-label="Toggle Onam music">
+
+                    <span class="music-icon">🎵</span>
+
+                    <span class="music-status">
+                        Music
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SLIDE-OUT NAVIGATION
+             ===================================================== -->
+
+        <nav
+            class="main-navigation"
+            id="mainNavigation"
+            aria-label="Main navigation">
+
+            <div class="navigation-inner">
+
+                <div class="navigation-heading">
+
+                    <span class="nav-eyebrow">
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Kerala<br>
+                        <span>in the Spirit of Onam</span>
+                    </h2>
+
+                    <p>
+                        Walk through our little digital celebration
+                        of Kerala, its traditions, nature and memories.
+                    </p>
+
+                </div>
+
+
+                <ul class="navigation-list">
+
+                    <li>
+                        <a href="#home" class="nav-link active">
+                            <span class="nav-number">01</span>
+                            <span class="nav-icon">🏠</span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about-onam" class="nav-link">
+                            <span class="nav-number">02</span>
+                            <span class="nav-icon">🌼</span>
+                            <span class="nav-label">About Onam</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#kerala" class="nav-link">
+                            <span class="nav-number">03</span>
+                            <span class="nav-icon">🌴</span>
+                            <span class="nav-label">Kerala</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#memories" class="nav-link">
+                            <span class="nav-number">04</span>
+                            <span class="nav-icon">📸</span>
+                            <span class="nav-label">Memories</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#pookolam" class="nav-link">
+                            <span class="nav-number">05</span>
+                            <span class="nav-icon">🌸</span>
+                            <span class="nav-label">Pookolam</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#videos" class="nav-link">
+                            <span class="nav-number">06</span>
+                            <span class="nav-icon">🎬</span>
+                            <span class="nav-label">Onam Videos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#music" class="nav-link">
+                            <span class="nav-number">07</span>
+                            <span class="nav-icon">🎵</span>
+                            <span class="nav-label">Onam Music</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#share-memory" class="nav-link">
+                            <span class="nav-number">08</span>
+                            <span class="nav-icon">💚</span>
+                            <span class="nav-label">Share a Memory</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <div class="navigation-footer">
+
+                    <p>
+                        <span>🌴</span>
+                        Made with the spirit of Kerala
+                    </p>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- Dark overlay behind the navigation -->
+        <div
+            class="navigation-overlay"
+            id="navigationOverlay"
+            aria-hidden="true">
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN WEBSITE CONTENT
+         ========================================================= -->
+
+    <main id="mainContent">
+
+
+        <!-- =====================================================
+             HERO / HOME SECTION
+             ===================================================== -->
+
+        <section
+            class="hero-section"
+            id="home"
+            aria-labelledby="heroTitle">
+
+            <!-- Hero background -->
+            <div class="hero-background">
+
+                <div class="hero-image"></div>
+
+                <div class="hero-gradient"></div>
+
+                <div class="hero-vignette"></div>
+
+            </div>
+
+
+            <!-- Kerala decorative silhouettes -->
+            <div class="hero-landscape" aria-hidden="true">
+
+                <div class="hill hill-back"></div>
+                <div class="hill hill-middle"></div>
+                <div class="hill hill-front"></div>
+
+            </div>
+
+
+            <!-- Floating hero flowers -->
+            <div class="hero-flowers" aria-hidden="true">
+
+                <span class="hero-flower flower-a">🌼</span>
+                <span class="hero-flower flower-b">🌸</span>
+                <span class="hero-flower flower-c">🌼</span>
+                <span class="hero-flower flower-d">🌺</span>
+
+            </div>
+
+
+            <!-- Hero content -->
+            <div class="hero-content">
+
+                <p class="hero-overline">
+                    <span class="overline-line"></span>
+                    A DIGITAL CELEBRATION OF ONAM
+                    <span class="overline-line"></span>
+                </p>
+
+
+                <h1
+                    class="hero-title"
+                    id="heroTitle">
+
+                    <span class="hero-title-small">
+                        The Spirit of
+                    </span>
+
+                    <span class="hero-title-main">
+                        ONAM
+                    </span>
+
+                    <span class="hero-title-script">
+                        AVTTK • Tradition • Togetherness
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+                    Where flowers become art, homes become festive,
+                    hearts come together, and We people celebrates
+                    the joy of being one.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#memories" class="primary-button">
+
+                        <span>Explore Our Memories</span>
+
+                        <span class="button-arrow">↓</span>
+
+                    </a>
+
+
+                    <a href="#pookolam" class="secondary-button">
+
+                        <span>Design a Pookolam</span>
+
+                        <span class="button-flower">🌼</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero bottom information -->
+            <div class="hero-bottom">
+
+                <div class="hero-location">
+
+                    <span class="location-icon">📍</span>
+
+                    <span>
+                        Kerala, God's Own Country
+                    </span>
+
+                </div>
+
+
+                <div class="hero-scroll">
+
+                    <span class="scroll-text">
+                        SCROLL TO EXPLORE
+                    </span>
+
+                    <span class="scroll-line"></span>
+
+                </div>
+
+
+                <div class="hero-season">
+
+                    <span>🌧️</span>
+                    <span>Monsoon</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRODUCTION / ONAM SECTION
+             ===================================================== -->
+
+        <section
+            class="intro-section section-padding"
+            id="about-onam"
+            aria-labelledby="onamIntroductionTitle">
+
+            <div class="section-container">
+
+
+                <!-- Section heading -->
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        THE HEART OF THE FESTIVAL
+                    </span>
+
+                    <h2 id="onamIntroductionTitle">
+                        More Than a Festival
+                    </h2>
+
+                    <div class="heading-decoration">
+
+                        <span></span>
+                        <span>🌼</span>
+                        <span></span>
+
+                    </div>
+
+                    <p>
+                        Onam is a celebration of happiness,
+                        abundance, tradition and togetherness.
+                        It brings people together regardless of
+                        background and fills Kerala with color,
+                        music, food and joy.
+                    </p>
+
+                </div>
+
+
+                <!-- Introduction cards -->
+
+                <div class="intro-grid">
+
+                    <article class="intro-card">
+
+                        <div class="intro-card-icon">
+                            🌼
+                        </div>
+
+                        <span class="intro-card-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Pookolam
+                        </h3>
+
+                        <p>
+                            Beautiful floral designs welcome the
+                            festive spirit and turn entrances into
+                            colorful works of art.
+                        </p>
+
+                    </article>
+
+
+                    <article class="intro-card">
+
+                        <div class="intro-card-icon">
+                            🛶
+                        </div>
+
+                        <span class="intro-card-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Vallam Kali
+                        </h3>
+
+                        <p>
+                            Kerala's famous boat races transform
+                            its waterways into spectacular celebrations
+                            of teamwork and tradition.
+                        </p>
+
+                    </article>
+
+
+                    <article class="intro-card">
+
+                        <div class="intro-card-icon">
+                            🍃
+                        </div>
+
+                        <span class="intro-card-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Onam Sadya
+                        </h3>
+
+                        <p>
+                            A traditional feast served on banana
+                            leaves brings together flavors, families
+                            and generations.
+                        </p>
+
+                    </article>
+
+
+                    <article class="intro-card">
+
+                        <div class="intro-card-icon">
+                            🤝
+                        </div>
+
+                        <span class="intro-card-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Togetherness
+                        </h3>
+
+                        <p>
+                            At its heart, Onam is about people coming
+                            together and sharing happiness.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             KERALA NATURE SECTION
+             ===================================================== -->
+
+        <section
+            class="kerala-section"
+            id="kerala"
+            aria-labelledby="keralaTitle">
+
+            <div class="kerala-background">
+
+                <div class="kerala-image"></div>
+                <div class="kerala-overlay"></div>
+
+            </div>
+
+
+            <div class="section-container">
+
+                <div class="kerala-content">
+
+                    <span class="section-eyebrow light">
+                        GOD'S OWN COUNTRY
+                    </span>
+
+                    <h2 id="keralaTitle">
+                        Where Nature<br>
+                        <span>Feels Like Home</span>
+                    </h2>
+
+                    <p>
+                        Green landscapes, coconut palms, peaceful
+                        backwaters, flowing rivers and monsoon skies
+                        form the natural canvas of Kerala.
+                    </p>
+
+                    <p>
+                        Onam arrives during this lush season,
+                        turning villages, towns and cities into
+                        vibrant spaces filled with celebration.
+                    </p>
+
+
+                    <div class="nature-features">
+
+                        <div class="nature-feature">
+
+                            <span>🌴</span>
+
+                            <div>
+                                <strong>Coconut Groves</strong>
+                                <small>Endless green horizons</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="nature-feature">
+
+                            <span>🌊</span>
+
+                            <div>
+                                <strong>Backwaters</strong>
+                                <small>Kerala's peaceful waterways</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="nature-feature">
+
+                            <span>🌧️</span>
+
+                            <div>
+                                <strong>Monsoon</strong>
+                                <small>Rain that renews the land</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="nature-feature">
+
+                            <span>🌾</span>
+
+                            <div>
+                                <strong>Paddy Fields</strong>
+                                <small>Fields of living green</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PHOTO MEMORIES SECTION
+             7 NORMAL PHOTOS + 3 POOKOLAM PHOTOS
+             ===================================================== -->
+
+        <section
+            class="memories-section section-padding"
+            id="memories"
+            aria-labelledby="memoriesTitle">
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            CAPTURED MOMENTS
+                        </span>
+
+                        <h2 id="memoriesTitle">
+                            Our Onam Memories
+                        </h2>
+
+                    </div>
+
+                    <p class="section-heading-description">
+                        Every photograph holds a little piece of
+                        celebration, tradition and Kerala.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     NORMAL PHOTO GALLERY
+                     7 PHOTOS
+                     ================================================= -->
+
+                <div class="gallery-grid" id="photoGallery">
+
+
+                    <!-- PHOTO 01 -->
+
+                    <article
+                        class="photo-card photo-card-large"
+                        data-photo-id="photo-01">
+
+                        <div class="photo-image-wrapper">
+
+                            <img
+                                src="images/onam-1.jpg"
+                                alt="Traditional Onam celebration in Kerala"
+                                class="photo-image"
+                                loading="lazy">
+
+                            <div class="photo-overlay">
+
+                                <span class="photo-number">
+                                    01
+                                </span>
+
+                                <button
+                                    class="view-photo-button"
+                                    type="button"
+                                    data-photo="photo-01"
+                                    aria-label="View Onam photograph 1">
+
+                                    View Memory
+                                    <span>↗</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <div class="photo-heading">
+
+                                <h3>
+                                    A Celebration of Joy
+                                </h3>
+
+                                <span class="photo-location">
+                                    Kerala • Onam
+                                </span>
+
+                            </div>
+
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="photo-01"
+                                    aria-label="Like photograph 1"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-photo-01"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-photo-01"
+                                hidden>
+
+                                <div class="comments-list"
+                                    data-comments-for="photo-01">
+                                </div>
+
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="photo-01">
+
+                                    <label
+                                        for="comment-photo-01"
+                                        class="visually-hidden">
+                                        Write a comment
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-photo-01"
+                                        name="comment"
+                                        placeholder="Share your thoughts..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PHOTO 02 -->
+
+                    <article
+                        class="photo-card"
+                        data-photo-id="photo-02">
+
+                        <div class="photo-image-wrapper">
+
+                            <img
+                                src="images/onam-2.jpg"
+                                alt="Kerala landscape during Onam season"
+                                class="photo-image"
+                                loading="lazy">
+
+                            <div class="photo-overlay">
+
+                                <span class="photo-number">
+                                    02
+                                </span>
+
+                                <button
+                                    class="view-photo-button"
+                                    type="button"
+                                    data-photo="photo-02"
+                                    aria-label="View Onam photograph 2">
+
+                                    View Memory
+                                    <span>↗</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <div class="photo-heading">
+
+                                <h3>
+                                    Joy of Togetherness
+                                </h3>
+
+                                <span class="photo-location">
+                                    Kerala • Nature
+                                </span>
+
+                            </div>
+
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="photo-02"
+                                    aria-label="Like photograph 2"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-photo-02"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-photo-02"
+                                hidden>
+
+                                <div class="comments-list"
+                                    data-comments-for="photo-02">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="photo-02">
+
+                                    <label
+                                        for="comment-photo-02"
+                                        class="visually-hidden">
+                                        Write a comment
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-photo-02"
+                                        name="comment"
+                                        placeholder="Share your thoughts..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PHOTO 03 -->
+
+                    <article
+                        class="photo-card"
+                        data-photo-id="photo-03">
+
+                        <div class="photo-image-wrapper">
+
+                            <img
+                                src="images/onam-3.jpg"
+                                alt="Onam decorations and festive atmosphere"
+                                class="photo-image"
+                                loading="lazy">
+
+                            <div class="photo-overlay">
+
+                                <span class="photo-number">
+                                    03
+                                </span>
+
+                                <button
+                                    class="view-photo-button"
+                                    type="button"
+                                    data-photo="photo-03"
+                                    aria-label="View Onam photograph 3">
+
+                                    View Memory
+                                    <span>↗</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <div class="photo-heading">
+
+                                <h3>
+                                    Colors of Onam
+                                </h3>
+
+                                <span class="photo-location">
+                                    Kerala • Celebration
+                                </span>
+
+                            </div>
+
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="photo-03"
+                                    aria-label="Like photograph 3"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-photo-03"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-photo-03"
+                                hidden>
+
+                                <div class="comments-list"
+                                    data-comments-for="photo-03">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="photo-03">
+
+                                    <label
+                                        for="comment-photo-03"
+                                        class="visually-hidden">
+                                        Write a comment
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-photo-03"
+                                        name="comment"
+                                        placeholder="Share your thoughts..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PHOTO 04 -->
+
+                    <article
+                        class="photo-card photo-card-wide"
+                        data-photo-id="photo-04">
+
+                        <div class="photo-image-wrapper">
+
+                            <img
+                                src="images/onam-4.jpg"
+                                alt="Kerala Onam gathering"
+                                class="photo-image"
+                                loading="lazy">
+
+                            <div class="photo-overlay">
+
+                                <span class="photo-number">
+                                    04
+                                </span>
+
+                                <button
+                                    class="view-photo-button"
+                                    type="button"
+                                    data-photo="photo-04"
+                                    aria-label="View Onam photograph 4">
+
+                                    View Memory
+                                    <span>↗</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <div class="photo-heading">
+
+                                <h3>
+                                    Together We Celebrate
+                                </h3>
+
+                                <span class="photo-location">
+                                    Kerala • Togetherness
+                                </span>
+
+                            </div>
+
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="photo-04"
+                                    aria-label="Like photograph 4"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-photo-04"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-photo-04"
+                                hidden>
+
+                                <div class="comments-list"
+                                    data-comments-for="photo-04">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="photo-04">
+
+                                    <label
+                                        for="comment-photo-04"
+                                        class="visually-hidden">
+                                        Write a comment
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-photo-04"
+                                        name="comment"
+                                        placeholder="Share your thoughts..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PHOTO 05 -->
+
+                    <article
+                        class="photo-card"
+                        data-photo-id="photo-05">
+
+                        <div class="photo-image-wrapper">
+
+                            <img
+                                src="images/onam-5.jpg"
+                                alt="Traditional Kerala festive decoration"
+                                class="photo-image"
+                                loading="lazy">
+
+                            <div class="photo-overlay">
+
+                                <span class="photo-number">
+                                    05
+                                </span>
+
+                                <button
+                                    class="view-photo-button"
+                                    type="button"
+                                    data-photo="photo-05"
+                                    aria-label="View Onam photograph 5">
+
+                                    View Memory
+                                    <span>↗</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <div class="photo-heading">
+
+                                <h3>
+                                    Festive spirit
+                                </h3>
+
+                                <span class="photo-location">
+                                    Kerala • Tradition
+                                </span>
+
+                            </div>
+
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="photo-05"
+                                    aria-label="Like photograph 5"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-photo-05"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-photo-05"
+                                hidden>
+
+                                <div class="comments-list"
+                                    data-comments-for="photo-05">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="photo-05">
+
+                                    <label
+                                        for="comment-photo-05"
+                                        class="visually-hidden">
+                                        Write a comment
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-photo-05"
+                                        name="comment"
+                                        placeholder="Share your thoughts..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PHOTO 06 -->
+
+                    <article
+                        class="photo-card"
+                        data-photo-id="photo-06">
+
+                        <div class="photo-image-wrapper">
+
+                            <img
+                                src="images/onam-6.jpg"
+                                alt="Kerala backwaters during the festive season"
+                                class="photo-image"
+                                loading="lazy">
+
+                            <div class="photo-overlay">
+
+                                <span class="photo-number">
+                                    06
+                                </span>
+
+                                <button
+                                    class="view-photo-button"
+                                    type="button"
+                                    data-photo="photo-06"
+                                    aria-label="View Onam photograph 6">
+
+                                    View Memory
+                                    <span>↗</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <div class="photo-heading">
+
+                                <h3>
+                                    Waters of Kerala
+                                </h3>
+
+                                <span class="photo-location">
+                                    Kerala • Backwaters
+                                </span>
+
+                            </div>
+
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="photo-06"
+                                    aria-label="Like photograph 6"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-photo-06"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-photo-06"
+                                hidden>
+
+                                <div class="comments-list"
+                                    data-comments-for="photo-06">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="photo-06">
+
+                                    <label
+                                        for="comment-photo-06"
+                                        class="visually-hidden">
+                                        Write a comment
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-photo-06"
+                                        name="comment"
+                                        placeholder="Share your thoughts..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PHOTO 07 -->
+
+                    <article
+                        class="photo-card photo-card-large"
+                        data-photo-id="photo-07">
+
+                        <div class="photo-image-wrapper">
+
+                            <img
+                                src="images/onam-7.jpg"
+                                alt="Kerala village landscape during Onam"
+                                class="photo-image"
+                                loading="lazy">
+
+                            <div class="photo-overlay">
+
+                                <span class="photo-number">
+                                    07
+                                </span>
+
+                                <button
+                                    class="view-photo-button"
+                                    type="button"
+                                    data-photo="photo-07"
+                                    aria-label="View Onam photograph 7">
+
+                                    View Memory
+                                    <span>↗</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <div class="photo-heading">
+
+                                <h3>
+                                    Children in Celebration!
+                                </h3>
+
+                                <span class="photo-location">
+                                    Kerala • Village Life
+                                </span>
+
+                            </div>
+
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="photo-07"
+                                    aria-label="Like photograph 7"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-photo-07"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-photo-07"
+                                hidden>
+
+                                <div class="comments-list"
+                                    data-comments-for="photo-07">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="photo-07">
+
+                                    <label
+                                        for="comment-photo-07"
+                                        class="visually-hidden">
+                                        Write a comment
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-photo-07"
+                                        name="comment"
+                                        placeholder="Share your thoughts..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     POOKOLAM PHOTO COLLECTION
+                     3 PHOTOS
+                     ================================================= -->
+
+                <div class="pookolam-gallery-heading">
+
+                    <span class="section-eyebrow">
+                        FLOWERS OF ONAM
+                    </span>
+
+                    <h3>
+                        Pookolam Gallery
+                    </h3>
+
+                    <p>
+                        Three little glimpses of Kerala's beautiful
+                        floral art.
+                    </p>
+
+                </div>
+
+
+                <div class="pookolam-gallery-grid">
+
+
+                    <!-- POOKOLAM PHOTO 01 -->
+
+                    <article
+                        class="pookolam-photo-card"
+                        data-photo-id="pookolam-01">
+
+                        <div class="pookolam-photo-image">
+
+                            <img
+                                src="images/pookolam-1.jpg"
+                                alt="Traditional colorful Pookolam design"
+                                loading="lazy">
+
+                            <span class="pookolam-photo-label">
+                                POOKOLAM 01
+                            </span>
+
+                        </div>
+
+
+                        <div class="pookolam-photo-content">
+
+                            <h4>
+                                Flowers in Harmony
+                            </h4>
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="pookolam-01"
+                                    aria-label="Like Pookolam photograph 1"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-pookolam-01"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-pookolam-01"
+                                hidden>
+
+                                <div
+                                    class="comments-list"
+                                    data-comments-for="pookolam-01">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="pookolam-01">
+
+                                    <label
+                                        for="comment-pookolam-01"
+                                        class="visually-hidden">
+                                        Comment on this Pookolam
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-pookolam-01"
+                                        placeholder="Say something about this Pookolam..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POOKOLAM PHOTO 02 -->
+
+                    <article
+                        class="pookolam-photo-card"
+                        data-photo-id="pookolam-02">
+
+                        <div class="pookolam-photo-image">
+
+                            <img
+                                src="images/pookolam-2.jpg"
+                                alt="Detailed Kerala Pookolam made with flowers"
+                                loading="lazy">
+
+                            <span class="pookolam-photo-label">
+                                POOKOLAM 02
+                            </span>
+
+                        </div>
+
+
+                        <div class="pookolam-photo-content">
+
+                            <h4>
+                                A Circle of Celebration
+                            </h4>
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="pookolam-02"
+                                    aria-label="Like Pookolam photograph 2"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-pookolam-02"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-pookolam-02"
+                                hidden>
+
+                                <div
+                                    class="comments-list"
+                                    data-comments-for="pookolam-02">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="pookolam-02">
+
+                                    <label
+                                        for="comment-pookolam-02"
+                                        class="visually-hidden">
+                                        Comment on this Pookolam
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-pookolam-02"
+                                        placeholder="Say something about this Pookolam..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POOKOLAM PHOTO 03 -->
+
+                    <article
+                        class="pookolam-photo-card"
+                        data-photo-id="pookolam-03">
+
+                        <div class="pookolam-photo-image">
+
+                            <img
+                                src="images/pookolam-3.jpg"
+                                alt="Elegant traditional Onam Pookolam"
+                                loading="lazy">
+
+                            <span class="pookolam-photo-label">
+                                POOKOLAM 03
+                            </span>
+
+                        </div>
+
+
+                        <div class="pookolam-photo-content">
+
+                            <h4>
+                                Tradition in Every Petal
+                            </h4>
+
+                            <div class="photo-actions">
+
+                                <button
+                                    class="like-button"
+                                    type="button"
+                                    data-photo-id="pookolam-03"
+                                    aria-label="Like Pookolam photograph 3"
+                                    aria-pressed="false">
+
+                                    <span class="like-icon">♡</span>
+                                    <span class="like-count">0</span>
+
+                                </button>
+
+
+                                <button
+                                    class="comment-toggle"
+                                    type="button"
+                                    data-target="comments-pookolam-03"
+                                    aria-expanded="false">
+
+                                    💬
+                                    <span>Comments</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="comments-area"
+                                id="comments-pookolam-03"
+                                hidden>
+
+                                <div
+                                    class="comments-list"
+                                    data-comments-for="pookolam-03">
+                                </div>
+
+                                <form
+                                    class="comment-form"
+                                    data-comment-form="pookolam-03">
+
+                                    <label
+                                        for="comment-pookolam-03"
+                                        class="visually-hidden">
+                                        Comment on this Pookolam
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="comment-pookolam-03"
+                                        placeholder="Say something about this Pookolam..."
+                                        maxlength="200"
+                                        autocomplete="off">
+
+                                    <button type="submit">
+                                        Post
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             POOKOLAM CREATOR
+             ===================================================== -->
+
+        <section
+            class="pookolam-section section-padding"
+            id="pookolam"
+            aria-labelledby="pookolamTitle">
+
+            <div class="section-container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        YOUR TURN
+                    </span>
+
+                    <h2 id="pookolamTitle">
+                        Create Your Own Pookolam
+                    </h2>
+
+                    <div class="heading-decoration">
+
+                        <span></span>
+                        <span>🌼</span>
+                        <span></span>
+
+                    </div>
+
+                    <p>
+                        Traditional Pookolam is made with flowers.
+                        Here, you can create your own digital version.
+                    </p>
+
+                </div>
+
+
+                <div class="pookolam-creator">
+
+
+                    <!-- Drawing area -->
+
+                    <div class="drawing-panel">
+
+                        <div class="drawing-header">
+
+                            <div>
+
+                                <span class="tool-label">
+                                    DIGITAL POOKOLAM
+                                </span>
+
+                                <h3>
+                                    Let the flowers speak
+                                </h3>
+
+                            </div>
+
+                            <span class="drawing-status"
+                                id="drawingStatus">
+                                Ready
+                            </span>
+
+                        </div>
+
+
+                        <div class="canvas-wrapper">
+
+                            <canvas
+                                id="pookolamCanvas"
+                                width="800"
+                                height="800"
+                                aria-label="Pookolam drawing canvas">
+                            </canvas>
+
+
+                            <div
+                                class="canvas-placeholder"
+                                id="canvasPlaceholder">
+
+                                <span class="canvas-flower">
+                                    🌼
+                                </span>
+
+                                <strong>
+                                    Your Pookolam Starts Here
+                                </strong>
+
+                                <small>
+                                    Choose a color and begin creating.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="drawing-footer">
+
+                            <span>
+                                🖌️ Draw inside the circle
+                            </span>
+
+                            <span>
+                                🌼 Create • Experiment • Celebrate
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Drawing controls -->
+
+                    <aside
+                        class="drawing-controls"
+                        aria-label="Pookolam drawing controls">
+
+                        <div class="control-group">
+
+                            <span class="control-title">
+                                FLOWER COLORS
+                            </span>
+
+                            <div class="color-palette">
+
+                                <button
+                                    type="button"
+                                    class="color-button active"
+                                    data-color="#F4C430"
+                                    aria-label="Yellow"
+                                    style="--color: #F4C430;">
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="color-button"
+                                    data-color="#E63946"
+                                    aria-label="Red"
+                                    style="--color: #E63946;">
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="color-button"
+                                    data-color="#F77F00"
+                                    aria-label="Orange"
+                                    style="--color: #F77F00;">
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="color-button"
+                                    data-color="#FFFFFF"
+                                    aria-label="White"
+                                    style="--color: #FFFFFF;">
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="color-button"
+                                    data-color="#2A9D8F"
+                                    aria-label="Green"
+                                    style="--color: #2A9D8F;">
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="color-button"
+                                    data-color="#8E44AD"
+                                    aria-label="Purple"
+                                    style="--color: #8E44AD;">
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="control-group">
+
+                            <label
+                                class="control-title"
+                                for="brushSize">
+                                BRUSH SIZE
+                            </label>
+
+                            <input
+                                type="range"
+                                id="brushSize"
+                                min="2"
+                                max="40"
+                                value="12">
+
+                            <div class="range-labels">
+                                <span>Fine</span>
+                                <span>Bold</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="control-group">
+
+                            <span class="control-title">
+                                TOOLS
+                            </span>
+
+                            <div class="drawing-tools">
+
+                                <button
+                                    type="button"
+                                    class="tool-button active"
+                                    id="brushTool">
+
+                                    🖌️
+                                    <span>Brush</span>
+
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="tool-button"
+                                    id="eraserTool">
+
+                                    🧹
+                                    <span>Eraser</span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="control-group">
+
+                            <span class="control-title">
+                                ACTIONS
+                            </span>
+
+                            <div class="drawing-actions">
+
+                                <button
+                                    type="button"
+                                    class="drawing-action-button"
+                                    id="clearCanvas">
+
+                                    Clear Pookolam
+
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="drawing-action-button primary"
+                                    id="savePookolam">
+
+                                    Save Creation
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="creator-note">
+
+                            <span>🌼</span>
+
+                            <p>
+                                There is no right or wrong design.
+                                Every flower is part of your story.
+                            </p>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VIDEO SECTION
+             ===================================================== -->
+
+        <section
+            class="videos-section section-padding"
+            id="videos"
+            aria-labelledby="videosTitle">
+
+            <div class="section-container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        SEE • HEAR • FEEL
+                    </span>
+
+                    <h2 id="videosTitle">
+                        Onam in Motion
+                    </h2>
+
+                    <div class="heading-decoration">
+
+                        <span></span>
+                        <span>🎬</span>
+                        <span></span>
+
+                    </div>
+
+                    <p>
+                        Three moments that bring the energy and beauty
+                        of Kerala's Onam celebrations to life.
+                    </p>
+
+                </div>
+
+
+                <div class="video-grid">
+
+
+                    <!-- VIDEO 01 -->
+
+                    <article class="video-card featured-video">
+
+                        <div class="video-wrapper">
+
+                            <video
+                                class="onam-video"
+                                id="onamVideo1"
+                                controls
+                                preload="metadata"
+                                poster="images/video-poster-1.jpg">
+
+                                <source
+                                    src="videos/onam-1.mp4"
+                                    type="video/mp4">
+
+                                Your browser does not support HTML5 video.
+
+                            </video>
+
+                            <div class="video-number">
+                                01
+                            </div>
+
+                        </div>
+
+
+                        <div class="video-content">
+
+                            <span>
+                                ONAM MOMENT 01
+                            </span>
+
+                            <h3>
+                                The Celebration Begins
+                            </h3>
+
+                            <p>
+                                A glimpse into the excitement and
+                                atmosphere surrounding Onam.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 02 -->
+
+                    <article class="video-card">
+
+                        <div class="video-wrapper">
+
+                            <video
+                                class="onam-video"
+                                id="onamVideo2"
+                                controls
+                                preload="metadata"
+                                poster="images/video-poster-2.jpg">
+
+                                <source
+                                    src="videos/onam-2.mp4"
+                                    type="video/mp4">
+
+                                Your browser does not support HTML5 video.
+
+                            </video>
+
+                            <div class="video-number">
+                                02
+                            </div>
+
+                        </div>
+
+
+                        <div class="video-content">
+
+                            <span>
+                                ONAM MOMENT 02
+                            </span>
+
+                            <h3>
+                                Warmth of being ourself
+                            </h3>
+
+                            <p>
+                                Tradition, students and the vibrant
+                                colors of pookolam.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 03 -->
+
+                    <article class="video-card">
+
+                        <div class="video-wrapper">
+
+                            <video
+                                class="onam-video"
+                                id="onamVideo3"
+                                controls
+                                preload="metadata"
+                                poster="images/video-poster-3.jpg">
+
+                                <source
+                                    src="videos/onam-3.mp4"
+                                    type="video/mp4">
+
+                                Your browser does not support HTML5 video.
+
+                            </video>
+
+                            <div class="video-number">
+                                03
+                            </div>
+
+                        </div>
+
+
+                        <div class="video-content">
+
+                            <span>
+                                ONAM MOMENT 03
+                            </span>
+
+                            <h3>
+                                Together as One
+                            </h3>
+
+                            <p>
+                                The spirit of togetherness that makes
+                                Onam special.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MUSIC SECTION
+             ===================================================== -->
+
+        <section
+            class="music-section section-padding"
+            id="music"
+            aria-labelledby="musicTitle">
+
+            <div class="music-background" aria-hidden="true">
+
+                <div class="music-pattern"></div>
+
+            </div>
+
+
+            <div class="section-container">
+
+                <div class="music-card">
+
+
+                    <div class="music-artwork">
+
+                        <div class="music-artwork-inner">
+
+                            <span class="music-art-flower">
+                                🌼
+                            </span>
+
+                            <span class="music-art-title">
+                                ONAM
+                            </span>
+
+                            <span class="music-art-subtitle">
+                                Kerala Vibes
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="music-player-content">
+
+                        <span class="section-eyebrow">
+                            THE SOUND OF ONAM
+                        </span>
+
+                        <h2 id="musicTitle">
+                            A Song for Celebration
+                        </h2>
+
+                        <p class="music-description">
+                            Let the music fill the room with the
+                            festive spirit of Kerala.
+                        </p>
+
+
+                        <audio
+                            id="onamAudio"
+                            preload="metadata">
+
+                            <source
+                                src="music/onam-song.mp3"
+                                type="audio/mpeg">
+
+                            Your browser does not support HTML5 audio.
+
+                        </audio>
+
+
+                        <div class="custom-audio-player">
+
+
+                            <button
+                                type="button"
+                                class="audio-play-button"
+                                id="audioPlayButton"
+                                aria-label="Play Onam music">
+
+                                ▶
+
+                            </button>
+
+
+                            <div class="audio-main">
+
+                                <div class="audio-title-row">
+
+                                    <strong>
+                                        Onam Celebration
+                                    </strong>
+
+                                    <span id="audioTime">
+                                        0:00 / 0:00
+                                    </span>
+
+                                </div>
+
+
+                                <input
+                                    type="range"
+                                    class="audio-progress"
+                                    id="audioProgress"
+                                    min="0"
+                                    max="100"
+                                    value="0"
+                                    aria-label="Music progress">
+
+
+                                <div class="audio-bottom">
+
+                                    <span>
+                                        🎵
+                                    </span>
+
+                                    <input
+                                        type="range"
+                                        class="audio-volume"
+                                        id="audioVolume"
+                                        min="0"
+                                        max="1"
+                                        step="0.01"
+                                        value="1"
+                                        aria-label="Music volume">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="music-note">
+
+                            <span>🌴</span>
+
+                            <p>
+                                Best experienced with the sound
+                                turned on during the presentation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SHARE YOUR MEMORY SECTION
+             ===================================================== -->
+
+        <section
+            class="share-section section-padding"
+            id="share-memory"
+            aria-labelledby="shareTitle">
+
+            <div class="section-container">
+
+
+                <div class="share-layout">
+
+
+                    <!-- Left introduction -->
+
+                    <div class="share-introduction">
+
+                        <span class="section-eyebrow">
+                            YOUR STORY MATTERS
+                        </span>
+
+                        <h2 id="shareTitle">
+                            Share Your<br>
+                            <span>Onam Memory</span>
+                        </h2>
+
+                        <p>
+                            What does Onam mean to you?
+                            A family gathering, a favorite dish,
+                            a Pookolam, a game, a song, a laugh
+                            with friends — every memory matters.
+                        </p>
+
+                        <div class="share-decoration"
+                            aria-hidden="true">
+
+                            <span>🌼</span>
+                            <span>🌿</span>
+                            <span>🌼</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Memory form -->
+
+                    <div class="memory-form-container">
+
+                        <form
+                            class="memory-form"
+                            id="memoryForm"
+                            novalidate>
+
+
+                            <div class="form-header">
+
+                                <span>
+                                    🌼
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Add Your Memory
+                                    </strong>
+
+                                    <small>
+                                        Leave a little piece of your Onam here.
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Name -->
+
+                            <div class="form-group">
+
+                                <label for="memoryName">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="memoryName"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    maxlength="50"
+                                    autocomplete="name"
+                                    required>
+
+                                <span
+                                    class="form-error"
+                                    id="memoryNameError"
+                                    aria-live="polite">
+                                </span>
+
+                            </div>
+
+
+                            <!-- Memory -->
+
+                            <div class="form-group">
+
+                                <label for="memoryText">
+                                    Your Onam Memory
+                                </label>
+
+                                <textarea
+                                    id="memoryText"
+                                    name="memory"
+                                    rows="6"
+                                    maxlength="500"
+                                    placeholder="Tell us about your favorite Onam memory..."
+                                    required>
+                                </textarea>
+
+                                <div class="character-counter">
+                                    <span id="memoryCharacterCount">
+                                        0
+                                    </span>
+                                    / 500
+                                </div>
+
+                                <span
+                                    class="form-error"
+                                    id="memoryTextError"
+                                    aria-live="polite">
+                                </span>
+
+                            </div>
+
+
+                            <!-- Optional image -->
+
+                            <div class="form-group">
+
+                                <label for="memoryImage">
+                                    Add a Photo
+                                    <span>(Optional)</span>
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="memoryImage"
+                                    name="image"
+                                    accept="image/jpeg,image/png,image/webp">
+
+                                <small class="file-help">
+                                    JPG, PNG or WebP
+                                </small>
+
+                                <div
+                                    class="memory-image-preview"
+                                    id="memoryImagePreview"
+                                    hidden>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Submit -->
+
+                            <button
+                                type="submit"
+                                class="memory-submit-button">
+
+                                <span>
+                                    Share My Memory
+                                </span>
+
+                                <span>
+                                    🌼
+                                </span>
+
+                            </button>
+
+
+                            <p
+                                class="form-success"
+                                id="memoryFormSuccess"
+                                role="status"
+                                aria-live="polite">
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     USER MEMORY DISPLAY
+                     ================================================= -->
+
+                <div class="shared-memories">
+
+                    <div class="shared-memories-heading">
+
+                        <div>
+
+                            <span class="section-eyebrow">
+                                FROM OUR VISITORS
+                            </span>
+
+                            <h3>
+                                Memories Shared With Us
+                            </h3>
+
+                        </div>
+
+                        <span
+                            class="memory-count"
+                            id="memoryCount">
+                            0 memories
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="memory-card-grid"
+                        id="memoryCardGrid">
+
+                        <!-- JavaScript will insert memory cards here -->
+
+                        <div
+                            class="empty-memory-state"
+                            id="emptyMemoryState">
+
+                            <span>
+                                🌿
+                            </span>
+
+                            <h4>
+                                The first memory could be yours.
+                            </h4>
+
+                            <p>
+                                Share your Onam story and let it become
+                                part of our celebration.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ONAM CLOSING SECTION
+             ===================================================== -->
+
+        <section
+            class="closing-section"
+            aria-labelledby="closingTitle">
+
+            <div class="closing-background">
+
+                <div class="closing-image"></div>
+                <div class="closing-overlay"></div>
+
+            </div>
+
+
+            <div class="closing-content">
+
+                <span class="closing-flower">
+                    🌼
+                </span>
+
+                <span class="section-eyebrow light">
+                    UNTIL WE CELEBRATE AGAIN
+                </span>
+
+                <h2 id="closingTitle">
+                    Onam is a feeling.
+                </h2>
+
+                <p>
+                    A feeling of home.
+                    A feeling of family.
+                    A feeling of togetherness.
+                </p>
+
+                <div class="closing-divider">
+                    <span></span>
+                    🌴
+                    <span></span>
+                </div>
+
+                <strong>
+                    Happy Onam!
+                </strong>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         IMAGE LIGHTBOX / FULLSCREEN VIEWER
+         ========================================================= -->
+
+    <div
+        class="lightbox"
+        id="imageLightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightboxTitle"
+        hidden>
+
+        <div class="lightbox-backdrop"
+            id="lightboxBackdrop"></div>
+
+
+        <div class="lightbox-content">
+
+            <button
+                type="button"
+                class="lightbox-close"
+                id="lightboxClose"
+                aria-label="Close image viewer">
+
+                ×
+
+            </button>
+
+
+            <div class="lightbox-image-container">
+
+                <img
+                    id="lightboxImage"
+                    src=""
+                    alt="">
+
+            </div>
+
+
+            <div class="lightbox-details">
+
+                <span
+                    class="lightbox-number"
+                    id="lightboxNumber">
+                    01
+                </span>
+
+                <div>
+
+                    <h2 id="lightboxTitle">
+                        Onam Memory
+                    </h2>
+
+                    <p id="lightboxDescription">
+                        A beautiful moment from Kerala.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="lightbox-navigation">
+
+                <button
+                    type="button"
+                    id="lightboxPrevious"
+                    aria-label="Previous image">
+
+                    ←
+                    <span>Previous</span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="lightboxNext"
+                    aria-label="Next image">
+
+                    <span>Next</span>
+                    →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         TOAST / NOTIFICATION SYSTEM
+         =========================================================
+         JavaScript will use this for friendly notifications.
+         ========================================================= -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+        aria-atomic="true">
+    </div>
+
+
+    <!-- =========================================================
+         BACK TO TOP BUTTON
+         ========================================================= -->
+
+    <button
+        type="button"
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+        ↑
+
+    </button>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    🌼
+                </div>
+
+                <h2>
+                    ONAM
+                </h2>
+
+                <p>
+                    A digital celebration of Kerala's
+                    traditions, nature and togetherness.
+                </p>
+
+            </div>
+
+
+            <div class="footer-navigation">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about-onam">
+                            About Onam
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#memories">
+                            Memories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#pookolam">
+                            Pookolam
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-navigation">
+
+                <h3>
+                    Experience
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#videos">
+                            Videos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#music">
+                            Music
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#share-memory">
+                            Share a Memory
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-message">
+
+                <span>
+                    🌴 🌊 🌧️
+                </span>
+
+                <p>
+                    From the green heart of Kerala
+                    to your screen.
+                </p>
+
+                <strong>
+                    Happy Onam!
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear">2026</span>
+                12-A Onam Celebration
+            </p>
+
+            <p>
+                Created as a celebration of culture,
+                creativity and togetherness.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         =========================================================
+         IMPORTANT:
+         The script is loaded at the end of body so that the HTML
+         elements already exist when JavaScript starts working.
+         ========================================================= -->
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
+```
